@@ -1,0 +1,33 @@
+<% form_for(@recipe) do |f| %>
+	<div id="page1_title">
+  	<%= f.error_messages %>
+		<%= f.text_field :name, :class => 'book_input', :onblur => "this.style.border = 'none'" %>
+	</div>
+	<div id="page1">
+  	
+		<h4 class='first_page_label'><%= f.label :notes %></h4>
+   	<%= f.text_area :notes, :class => 'book_input', :onblur => "this.style.border = 'none'" %>
+  
+		<div id="category_inputs">
+			<h4><%= f.label :category_id, 'File Under', :id => 'file_under_label' %></h4>
+			<%= render(:partial => 'category_input', :object => @rootCategories) %>
+		</div>
+	
+    <h4><%= f.label :ingredients %></h4>
+		<ul id="ingredients_list">
+			<% 5.times do %>
+				<%= render :partial => 'ingredient_input' %>
+			<% end %>  	
+		</ul>
+
+</div>
+  <div id="page2">	
+		<h4 class='first_page_label'><%= f.label :directions %></h4>
+  	<%= f.text_area :directions, :class => 'book_input', :onblur => "this.style.border = 'none'" %>
+		<h4 id='yield_input_label'><%= f.label :yield %></h4>
+	  <%= f.text_field :yield, :class => 'book_input', :onblur => "this.style.border = 'none'" %>
+	</div>
+	<div id="page2_footer">
+		<%= f.submit 'Create' %>
+	</div>
+<% end %>

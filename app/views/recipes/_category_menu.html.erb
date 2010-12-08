@@ -1,0 +1,16 @@
+<!-- This partial renders a collection of Categories into a menu tree. The partial recursively calls itself if it finds 
+a nested collection in the collection, which denotes a submenu. --> 
+
+<!-- If a nested collection has been found, define a new <ul> block to contain the submenu it represents and
+process it by a recursive call to this partial. -->  
+<% if category_menu.kind_of?(Array) %>
+	<ul id="level=<%= category_menu[0].level%>&parent=<%= category_menu[0].parent_category_id%>" style="display: none">
+		<%= render(:partial => 'category_menu', :collection => category_menu)%>
+	</ul>
+<% else %>
+	<li id="category=<%= category_menu.id %>">
+		<%= link_to_function(category_menu.name, "browseRecipes(this, 
+			'#{url_for(:controller => 'recipes', :action => 'renderBrowserMenu')}', 
+			'#{url_for(:controller => 'recipes', :action => 'browse')}')")%>
+	</li>
+<% end %>

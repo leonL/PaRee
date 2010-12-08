@@ -1,0 +1,23 @@
+<div id="page1_title">
+	<h3><%= h @recipe.name %></h3>
+</div>
+<div id="page1">	
+	<h4>Notes</h4>
+	<p class='recipe_details'><%=h @recipe.notes %></p>
+	
+	<h4>Ingredients</h4>
+	<p><%=h @recipe.ingredients %></p>
+
+	<h4>Yield</h4>
+	<p><%=h @recipe.yield %></p>
+	
+</div>
+
+<div id="page2">
+	<h4>Directions</h4>
+	<p><%=h @recipe.directions %></p>	
+</div>
+
+<div id="page2_footer">
+	<%= link_to_remote('Edit', :update => 'book', :url => edit_recipe_path(@recipe), :method => :get)%>
+</div>

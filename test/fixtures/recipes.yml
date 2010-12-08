@@ -1,0 +1,93 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+gluten_free_pancakes:
+  id: 1
+  name: 'Gluten-Free Pancakes'
+  notes: 'Light fluffy deliciousness.'
+  yield: '12 pancakes, serves 4.'
+  ingredients: '1 cup rice or millet flour&&1/2 cup soy flour&&1/2 cup corn meal&&1 tbs non-alum baking powder&&1/4 tsp sea salt&&1 egg, beaten' 
+  directions: 'Combine all dry ingredients.&&Stir toegether all liquids; add to dry ingredients.&& Bake on preheated 350*F-375*F griddle.&&Turn only once.'
+  category_id: 1
+
+soy_honey_chicken:
+  id: 2
+  name: 'Soy-Honey Chicken'
+  notes: 'Hearty sweet, hearty savory'
+  yield: 'Serves 4.'
+  ingredients: '1/2 cup wildflower honey&&1/2 cup tamari&&1/2 cup dry sherry&&1 tsp grated fresh ginger root or tsp ground ginger&&1 medium clove garlic, crsuhed&&2 1/2 lb. broiler-fryer chicken, cut into serving size pieces'
+  directions: 'Combine honey, tamari, sherry, ginger root and garlic in a small bowl.&&Place chicken in large glass baking dish.&&Pour honey marinade over chicken, turing chicken to coat.&&Cover dish and place in refrigerator. Marinate at least 6 hours, turning to coat 2 or 3 times.&&Remove chicken from marinade; reserve marinade.&&Arrange chicken on over roasting pan.&&Cover with foil.&&Bake at 350*F for 30 minutes.&&Bring reserved marinade to a boil in small saucepan over medium heat; simmer at slow boil for 3 minutes.&&Set aside.&&Uncover chicken; brush with marinade. Bake uncovered, 30-54 minutes lornger or until juice run clear and chicken is no longer pink, brushing occasionally with marinade.'
+  category_id: 14
+
+olivier:
+  id: 3
+  name: 'Olivier'
+  notes: 'Twisted, Russian Potato Salad'
+  yield: 'One big bowl, 8 - 10 servings'
+  ingredients: '6 large Yukon Gold potatoes&&6 eggs&&6 pickles&&2 cups green beans&&6 beef or chicken sausages&&2 tbs mayo'
+  directions: 'Boil the potatos (in their skins) until soft and hardboil the eggs.&&Dice all the ingredients and comibne then in a bowl.&&Add the mayo and mix gently, being careful not to mash the salad. Add salat and pepper to taste'
+  category_id: 16
+
+steamed_ginger_fish:
+  id: 4
+  name: 'Steamed Ginger Fish'
+  notes: "Kosher and kickin'"
+  yield: '6 to 8 servings'
+  ingredients: '3-pound whole fish (trout, mullet, or bass)&&1 tsp. salt&&2 Tbsps. oil&&Sauce:&&1 Tbsp. sherry&&2 Tbsps soy sauce&&1/2 tsp sugar&&1/2 tsp salt&&1 tsp peanut oil&&2 slices fresh ginger root, shredded&& 2 scallions, chopped'
+  directions: 'Leave fish whole. Clean out cavity, removing everything from inside. Rinse in cold water and dry well. Make a few shallow diagonal cuts on top but do not cut through. Rub lightly with salt and oil, then place in shallow dish.&& SAUCE: Combine sauce ingredients in small bowl. Spread evenly on fish. Place into steamer...'
+  category_id: 13
+  
+roman_meal_granola:  
+  id: 5
+  name: 'Roman Meal Granola'
+  notes: "When in Rome..."
+  yield: '14 cups, 28 servings'
+  ingredients: '6 cuos regular rolled oats&&1 1/2 cups sunflower kernels&&1 cup chopped almonds&&1 cup nonfat dry milk&&1 1/2 cups packed brown sugar&&2/3 cup honey&&1/2 cup vegetable oil&&1/2 tsp vanilla'
+  directions: 'In 6 six quart bowl or larger thoroughly mix oats, cereal, sunflower kernels, almonds, dry mild and brown sugar. In small saucepan, blend honey and oil...'
+  category_id: 1
+  
+eggs_elegante_with_mushroom_sauce:
+  id: 6
+  name: 'Eggs Elegante with Mushroom Sauce'
+  notes: "Begin the day with a touch of class"
+  yield: 'Serves 3'
+  ingredients: '2 oz mushrooms(shitaken, honey mushrooms or chanterelles)&&2 tbs butter&&2 tbs flour&&1/2 cup chicken broth pepper, to taste&&1/2 cup dairy sour cream&&'
+  directions: 'For Sauce, sauté mushrooms in melted butter for 3 minutes or until tender. Stir in flour. Add chicken brother; cook and stir until mixture thickens. Stir in sour cream, pepper, Worcestershire and pepper sauce...'
+  category_id: 18
+  
+banana_bread_wheat_free:
+  id: 7
+  name: 'Wheat Free Banana Bread'
+  notes: "Banana bread without the carb sugar spike"
+  yield: '1 loaf, 8 slices'
+  ingredients: '3 very ripe bananas&&juice of 1 lemon&&1/12 cup soy margarine&&/ 3/4 cups spelt flour&&1/4 cup rice bran&&1/2 tsp salt&&1/2 tsp cardamom...'
+  directions: 'Preheat over to 375*. Mash banadas. Add lemon juice and mix until smooth. In another bowl, cream margarine and honey until creamy. Add banana mix to butter mix...'
+  category_id: 3
+  
+caraway_rye_muffins:
+  id: 8
+  name: 'Caraway-Rye Muffins'
+  notes: "Good and good for you."
+  yield: '12 muffins'
+  ingredients: '3/4 all purpose flour&&3/4 cups rye flour&&1 tbs baking powder&&3 tbs brown sugar&&2 tsp caraway seeds&&1 tsp grated orange peel&&1/2 tspsalt, optional&&1 egg, slightly beaten'
+  directions: 'Heat oven to 400*C. In a large bowl stir together dry ingredients and seasonings. In a medium bowl mix egg, milk and oil. Stire egg mixture into the dry ingredients...'
+  category_id: 19
+  
+blini:
+  id: 9
+  name: 'Blini'
+  notes: "Russian Appetizer Pancakes"
+  yield: '40 blini'
+  ingredients: '2 cups milk&&1 tbs sugar&&1 pkg active dry yeast&&2 cups all-purpose flour&&2 tbs melted butter or marginraine&&3 eggs, seperated&&caviar&&smoked salmon'
+  directions: 'Scald milk, pour into a large bowl. When lukewarm, add sugar and yeart, mixing well to dissolve yeast. Stir in 1 cup of the all-purpose flour; cover bowl and set in warm place until "sponge" doubles in volume...'
+  category_id: 4
+  
+roasted_pumpkin_seeds:
+  id: 10
+  name: 'Roasted Pumpkin Seeds'
+  notes: "Fresh pumpkin seeds are roasted with butter in salt to make this popular seasonal snack."
+  yield: 'Serves 6'
+  ingredients: '1 1/2 cups raw whole pumpkin seeds&&2 teaspoons butter, melted&&1 pinch salt'
+  directions: '1.Preheat oven to 300 degrees F (150 degrees C).&&2.Toss seeds in a bowl with the melted butter and salt. Spread the seeds in a single layer on a baking sheet and bake for about 45 minutes or until golden brown; stir occasionally.'
+  category_id: 4
+
+

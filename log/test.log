@@ -1,0 +1,221 @@
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "recipes" [0m
+
+
+Processing RecipesController#create (for 0.0.0.0 at 2010-10-22 14:44:56) [POST]
+  Parameters: {"recipe"=>{}}
+  [4;35;1mRecipe Create (0.3ms)[0m   [0mINSERT INTO "recipes" ("name", "directions", "created_at", "directory", "overview", "updated_at", "yield") VALUES(NULL, NULL, '2010-10-22 18:44:56', NULL, NULL, '2010-10-22 18:44:56', NULL)[0m
+Redirected to http://test.host/recipes/980190963
+Completed in 4ms (DB: 1) | 302 Found [http://test.host/recipes?]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "recipes" [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "recipes" [0m
+  [4;36;1mRecipe Load (0.2ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."id" = 980190962) [0m
+
+
+Processing RecipesController#destroy (for 0.0.0.0 at 2010-10-22 14:44:56) [DELETE]
+  Parameters: {"id"=>"980190962"}
+  [4;35;1mRecipe Load (0.2ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 980190962) [0m
+  [4;36;1mRecipe Destroy (0.2ms)[0m   [0;1mDELETE FROM "recipes" WHERE "id" = 980190962[0m
+Redirected to http://test.host/recipes
+Completed in 1ms (DB: 1) | 302 Found [http://test.host/recipes/980190962]
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "recipes" [0m
+  [4;36;1mRecipe Load (0.2ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."id" = 980190962) [0m
+
+
+Processing RecipesController#edit (for 0.0.0.0 at 2010-10-22 14:44:56) [GET]
+  Parameters: {"id"=>"980190962"}
+  [4;35;1mRecipe Load (0.2ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 980190962) [0m
+Rendering template within layouts/recipes
+Rendering recipes/edit
+Completed in 6ms (View: 5, DB: 0) | 200 OK [http://test.host/recipes/980190962/edit]
+
+
+Processing RecipesController#index (for 0.0.0.0 at 2010-10-22 14:44:56) [GET]
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" [0m
+Rendering template within layouts/recipes
+Rendering recipes/index
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://test.host/recipes]
+
+
+Processing RecipesController#new (for 0.0.0.0 at 2010-10-22 14:44:57) [GET]
+Rendering template within layouts/recipes
+Rendering recipes/new
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://test.host/recipes/new]
+  [4;35;1mRecipe Load (0.2ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 980190962) [0m
+
+
+Processing RecipesController#show (for 0.0.0.0 at 2010-10-22 14:44:57) [GET]
+  Parameters: {"id"=>"980190962"}
+  [4;36;1mRecipe Load (0.2ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."id" = 980190962) [0m
+Rendering template within layouts/recipes
+Rendering recipes/show
+Completed in 2ms (View: 1, DB: 0) | 200 OK [http://test.host/recipes/980190962]
+  [4;35;1mRecipe Load (0.2ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 980190962) [0m
+
+
+Processing RecipesController#update (for 0.0.0.0 at 2010-10-22 14:44:57) [PUT]
+  Parameters: {"id"=>"980190962", "recipe"=>{}}
+  [4;36;1mRecipe Load (0.2ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."id" = 980190962) [0m
+Redirected to http://test.host/recipes/980190962
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/recipes/980190962?]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "categories" [0m
+
+
+Processing CategoriesController#create (for 0.0.0.0 at 2010-11-09 09:27:36) [POST]
+  Parameters: {"category"=>{}}
+  [4;35;1mCategory Create (0.3ms)[0m   [0mINSERT INTO "categories" ("name", "created_at", "updated_at", "parent_category_id") VALUES(NULL, '2010-11-09 14:27:36', '2010-11-09 14:27:36', NULL)[0m
+Redirected to http://test.host/categories/18
+Completed in 5ms (DB: 2) | 302 Found [http://test.host/categories/create?]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "categories" [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "categories" [0m
+
+
+Processing CategoriesController#index (for 0.0.0.0 at 2010-11-09 09:27:36) [GET]
+  [4;36;1mCategory Load (0.9ms)[0m   [0;1mSELECT * FROM "categories" [0m
+Rendering template within layouts/categories
+Rendering categories/index
+Completed in 29ms (View: 27, DB: 1) | 200 OK [http://test.host/categories]
+
+
+Processing CategoriesController#new (for 0.0.0.0 at 2010-11-09 09:27:36) [GET]
+Rendering template within layouts/categories
+Rendering categories/new
+Completed in 3ms (View: 2, DB: 0) | 200 OK [http://test.host/categories/new]
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "recipes" [0m
+
+
+Processing RecipesController#create (for 0.0.0.0 at 2010-11-09 09:27:36) [POST]
+  Parameters: {"recipe"=>{}}
+  [4;36;1mRecipe Create (0.3ms)[0m   [0;1mINSERT INTO "recipes" ("name", "directions", "created_at", "directory", "overview", "updated_at", "yield", "ingredients") VALUES(NULL, NULL, '2010-11-09 14:27:36', NULL, NULL, '2010-11-09 14:27:36', NULL, NULL)[0m
+Redirected to http://test.host/recipes/980190963
+Completed in 4ms (DB: 0) | 302 Found [http://test.host/recipes/create?]
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "recipes" [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "recipes" [0m
+  [4;35;1mRecipe Load (0.2ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 980190962) [0m
+
+
+Processing RecipesController#destroy (for 0.0.0.0 at 2010-11-09 09:27:36) [DELETE]
+  Parameters: {"id"=>"980190962"}
+  [4;36;1mRecipe Load (0.2ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."id" = 980190962) [0m
+  [4;35;1mRecipe Destroy (0.1ms)[0m   [0mDELETE FROM "recipes" WHERE "id" = 980190962[0m
+Redirected to http://test.host/recipes
+Completed in 1ms (DB: 1) | 302 Found [http://test.host/recipes/destroy/980190962]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "recipes" [0m
+  [4;35;1mRecipe Load (0.2ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 980190962) [0m
+
+
+Processing RecipesController#edit (for 0.0.0.0 at 2010-11-09 09:27:36) [GET]
+  Parameters: {"id"=>"980190962"}
+  [4;36;1mRecipe Load (0.2ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."id" = 980190962) [0m
+Rendering template within layouts/recipes
+Rendering recipes/edit
+Completed in 54ms (View: 54, DB: 0) | 200 OK [http://test.host/recipes/edit/980190962]
+
+
+Processing RecipesController#index (for 0.0.0.0 at 2010-11-09 09:27:36) [GET]
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" [0m
+Rendering template within layouts/recipes
+Rendering recipes/index
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://test.host/recipes]
+
+
+Processing RecipesController#new (for 0.0.0.0 at 2010-11-09 09:27:36) [GET]
+Rendering template within layouts/recipes
+Rendering recipes/new
+Completed in 4ms (View: 4, DB: 0) | 200 OK [http://test.host/recipes/new]
+  [4;36;1mRecipe Load (0.2ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."id" = 980190962) [0m
+
+
+Processing RecipesController#show (for 0.0.0.0 at 2010-11-09 09:27:36) [GET]
+  Parameters: {"id"=>"980190962"}
+  [4;35;1mRecipe Load (0.2ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 980190962) [0m
+Rendering template within layouts/recipes
+Rendering recipes/show
+  [4;36;1mRecipe Load (0.2ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."id" = 980190962) [0m
+
+
+Processing RecipesController#update (for 0.0.0.0 at 2010-11-09 09:27:36) [PUT]
+  Parameters: {"id"=>"980190962", "recipe"=>{}}
+  [4;35;1mRecipe Load (0.2ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 980190962) [0m
+Redirected to http://test.host/recipes/980190962
+Completed in 2ms (DB: 0) | 302 Found [http://test.host/recipes/update/980190962?]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "categories" [0m
+
+
+Processing CategoriesController#create (for 0.0.0.0 at 2010-11-09 09:28:13) [POST]
+  Parameters: {"category"=>{}}
+  [4;35;1mCategory Create (0.2ms)[0m   [0mINSERT INTO "categories" ("name", "created_at", "updated_at", "parent_category_id") VALUES(NULL, '2010-11-09 14:28:13', '2010-11-09 14:28:13', NULL)[0m
+Redirected to http://test.host/categories/18
+Completed in 4ms (DB: 2) | 302 Found [http://test.host/categories/create?]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "categories" [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "categories" [0m
+
+
+Processing CategoriesController#index (for 0.0.0.0 at 2010-11-09 09:28:13) [GET]
+  [4;36;1mCategory Load (1.0ms)[0m   [0;1mSELECT * FROM "categories" [0m
+Rendering template within layouts/categories
+Rendering categories/index
+Completed in 29ms (View: 27, DB: 1) | 200 OK [http://test.host/categories]
+
+
+Processing CategoriesController#new (for 0.0.0.0 at 2010-11-09 09:28:13) [GET]
+Rendering template within layouts/categories
+Rendering categories/new
+Completed in 3ms (View: 2, DB: 0) | 200 OK [http://test.host/categories/new]
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "recipes" [0m
+
+
+Processing RecipesController#create (for 0.0.0.0 at 2010-11-09 09:28:13) [POST]
+  Parameters: {"recipe"=>{}}
+  [4;36;1mRecipe Create (0.2ms)[0m   [0;1mINSERT INTO "recipes" ("name", "directions", "created_at", "directory", "overview", "updated_at", "yield", "ingredients") VALUES(NULL, NULL, '2010-11-09 14:28:13', NULL, NULL, '2010-11-09 14:28:13', NULL, NULL)[0m
+Redirected to http://test.host/recipes/980190963
+Completed in 4ms (DB: 0) | 302 Found [http://test.host/recipes/create?]
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "recipes" [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "recipes" [0m
+  [4;35;1mRecipe Load (0.2ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 980190962) [0m
+
+
+Processing RecipesController#destroy (for 0.0.0.0 at 2010-11-09 09:28:13) [DELETE]
+  Parameters: {"id"=>"980190962"}
+  [4;36;1mRecipe Load (0.2ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."id" = 980190962) [0m
+  [4;35;1mRecipe Destroy (0.1ms)[0m   [0mDELETE FROM "recipes" WHERE "id" = 980190962[0m
+Redirected to http://test.host/recipes
+Completed in 1ms (DB: 1) | 302 Found [http://test.host/recipes/destroy/980190962]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "recipes" [0m
+  [4;35;1mRecipe Load (0.2ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 980190962) [0m
+
+
+Processing RecipesController#edit (for 0.0.0.0 at 2010-11-09 09:28:13) [GET]
+  Parameters: {"id"=>"980190962"}
+  [4;36;1mRecipe Load (0.2ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."id" = 980190962) [0m
+Rendering template within layouts/recipes
+Rendering recipes/edit
+Completed in 54ms (View: 54, DB: 0) | 200 OK [http://test.host/recipes/edit/980190962]
+
+
+Processing RecipesController#index (for 0.0.0.0 at 2010-11-09 09:28:13) [GET]
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" [0m
+Rendering template within layouts/recipes
+Rendering recipes/index
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://test.host/recipes]
+
+
+Processing RecipesController#new (for 0.0.0.0 at 2010-11-09 09:28:13) [GET]
+Rendering template within layouts/recipes
+Rendering recipes/new
+Completed in 4ms (View: 4, DB: 0) | 200 OK [http://test.host/recipes/new]
+  [4;36;1mRecipe Load (0.2ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."id" = 980190962) [0m
+
+
+Processing RecipesController#show (for 0.0.0.0 at 2010-11-09 09:28:13) [GET]
+  Parameters: {"id"=>"980190962"}
+  [4;35;1mRecipe Load (0.2ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 980190962) [0m
+Rendering template within layouts/recipes
+Rendering recipes/show
+  [4;36;1mRecipe Load (0.2ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."id" = 980190962) [0m
+
+
+Processing RecipesController#update (for 0.0.0.0 at 2010-11-09 09:28:13) [PUT]
+  Parameters: {"id"=>"980190962", "recipe"=>{}}
+  [4;35;1mRecipe Load (0.2ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 980190962) [0m
+Redirected to http://test.host/recipes/980190962
+Completed in 2ms (DB: 0) | 302 Found [http://test.host/recipes/update/980190962?]

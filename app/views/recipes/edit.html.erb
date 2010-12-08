@@ -1,0 +1,31 @@
+<% form_for(@recipe) do |f| %>
+	<div id="page1_title">
+  	<%= f.error_messages %>
+		<%= f.text_field :name, :class => 'book_input' %>
+	</div>
+	<div id="page1">
+  	<h4 class='first_page_label'><%= f.label :notes %></h4>
+   	<%= f.text_area :notes, :class => 'book_input', :id => 'notes_input' %>
+  
+    <h4><%= f.label :ingredients %></h4>
+    <%= f.text_area :ingredients, :class => 'book_input' %>
+  
+    <h4><%= f.label :yield %></h4>
+    <%= f.text_field :yield, :class => 'book_input' %>
+  </div>
+  <div id="page2">
+		<h4><%= f.label :directions %></h4>
+  	<%= f.text_area :directions %>
+ 	<p>
+    <%= f.label :category_id %><br />
+    <%= f.text_field :category_id %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+	</div>
+<% end %>
+<div id="page2_footer">
+	<%= link_to 'Show', @recipe %> |
+	<%= link_to 'Back', recipes_path %>
+</div>

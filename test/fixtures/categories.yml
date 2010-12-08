@@ -1,0 +1,96 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+breakfast_and_brunch:
+  id: 1
+  name: 'Breakfast & Brunch'
+  parent_category_id: null
+
+lunch_and_dinner:
+  id: 2
+  name: 'Lunch & Dinner'
+  parent_category_id: null
+
+breads_and_baking:
+  id: 3
+  name: 'Breads & Baking'
+  parent_category_id: null
+
+appetizers_and_snacks:
+  id: 4
+  name: 'Appetizers & Snacks'
+  parent_category_id: null
+ 
+drinks_and_cocktails:
+  id: 5
+  name: 'Drinks & Cocktails'
+  parent_category_id: null
+
+main_course:
+  id: 6
+  name: 'Main Course'
+  parent_category_id: 2
+
+side_dishes:
+  id: 7
+  name: 'Side Dishes'
+  parent_category_id: 2
+
+soup_and_stew:
+  id: 8
+  name: 'Soup & Stew'
+  parent_category_id: 2
+
+dessert:
+  id: 9
+  name: 'Dessert'
+  parent_category_id: 2
+  
+sandwiches_and_wraps:
+  id: 10
+  name: 'Sandwiches & Wraps'
+  parent_category_id: 6
+
+rice_and_grains:
+  id: 11
+  name: 'Rice & Grains'
+  parent_category_id: 6
+
+red_meat:
+  id: 12
+  name: 'Red Meat'
+  parent_category_id: 6
+
+fish_and_shellfish:
+  id: 13
+  name: 'Fish & Shellfish'
+  parent_category_id: 6
+
+poultry:
+    id: 14
+    name: 'Poultry'
+    parent_category_id: 6
+
+vegetarian:
+  id: 15
+  name: 'Vegetarian'
+  parent_category_id: 6
+
+salad_and_dressing:
+  id: 16
+  name: 'Salad & Dressing'
+  parent_category_id: 7
+
+potatoes:
+  id: 17
+  name: 'Potatoes'
+  parent_category_id: 7
+
+eggs:
+  id: 18
+  name: 'Eggs'
+  parent_category_id: 1
+  
+muffins:
+  id: 19
+  name: 'Muffins'
+  parent_category_id: 3

@@ -1,0 +1,319 @@
+/* Browser & Page layout and styles */
+
+html {	
+	height: 100%;
+	width: 100%;
+	margin: 0px;
+	padding: 0px;
+}
+
+body {		
+	margin-top: 10px;
+	padding: 0px;
+}
+
+#YSBCP {
+	margin: auto;
+	width: 999px;
+}
+
+a {
+	text-decoration: none;
+	font-weight: normal;
+}
+
+/* Bookmark Menu layout and styles */
+
+#bookmark {	
+	position: absolute;
+	padding: 0px;
+	margin: 0px;
+}
+
+#bookmarkNoFrill {
+	position: absolute;
+	left: 252px;
+	top: 61px;
+}
+
+#bookmark_menu {
+	position: absolute;
+	top: 100px;
+	left: 259px;
+	width: 130px;
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 11px;
+	line-height: 2em;
+	text-align: center;
+}
+
+#bookmark_menu a {
+	color: #66cccc;
+}
+
+#bookmark_menu #selected {
+	color: yellow;
+}
+
+#bookmark_menu a:hover {
+	text-decoration: underline;
+}
+
+/* Open book image layout */
+
+#open_book {	
+	position: absolute;
+	margin: auto;
+	top: 92px;
+	padding: 0px; 	
+	height: 653px;
+	width: 999px; 
+}
+
+/* Book layout and styles */
+
+#book {	
+	position: absolute;
+	margin: auto;
+	top: 92px;
+	padding: 0px; 	
+	height: 653px;
+	width: 999px; 
+}
+
+#book a {
+	color: black;
+}
+
+#book a:hover {
+	text-decoration: underline;
+}
+
+#book #selected {
+	font-weight: bold;
+	color: purple;
+}
+
+/* Page 1 layout and styles */
+
+#page1_title {	
+	position: absolute;
+	top: 20px;
+	left: 45px; 
+	width: 432px;
+	height: 45px;
+	padding: 0px;
+	font-family: Helvetica, Arial, sans-serif;
+	text-align: center;
+}
+
+#page1_title h3 {
+	margin-top: 13px;
+	font-weight: normal;
+}
+
+#page1 {
+	position: absolute;
+	top: 68px;
+	left: 50px;
+	width: 433px;
+	height: 510px;
+	overflow: hidden;
+}
+
+#page1_submenu {
+	position: relative;
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 18px;
+	line-height: 1.52em;
+	z-index: 1;
+	font-weight: bold;
+	color: purple;
+}
+
+/* Introduction Images layout (page 1) */
+
+#kugel {	
+	position: relative;
+	top: 15px;
+}
+
+#chef_reading {
+	position: relative;
+	bottom: 75px;
+	left: 100px;
+}
+
+#calgary_lukashevskys {
+	position: relative;
+	bottom: 40px;
+}
+
+/* Recipes Browser Menu layout and styles (page 1) */
+
+#category_menu {
+	position: relative;
+	bottom: 18px;
+	left: -20px;
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 16px;
+	line-height: 2.1em;
+}
+
+#category_menu ul {
+	list-style-type: none;
+}
+
+#selected_category {
+	font-weight: bold;
+}
+
+/* Page 2 layout and styles */
+
+#page2 {
+	position: absolute;
+	top: 72px;
+	left: 550px;
+	width: 395px;
+	height: 520px;
+}
+
+#page2 p {
+	padding: 0px;
+	color: #333333;
+	font-family: serif;
+	font-size: 16px;
+	line-height: 1.645em;
+}
+
+.bookmark_link_helper {
+	color: black;
+	font-family: sans-serif;
+	font-size: 17px;
+}
+
+#page2_footer {
+	position: absolute;
+	bottom: 30px;
+	left: 550px;
+	width: 395px;
+	height: 30px;
+	text-align: center;	
+}
+
+/* Recipes Browser Recipe List layout and styles (page 2) */
+
+#list_of_recipes {
+	/* border: dotted 1px; */
+	width: 400px;
+	position: absolute;
+	top: -20px;
+	left: -40px;
+	list-style-type: none;
+	font-family: courier, serif;
+	font-size: 18px;
+	line-height: 3.02em;
+	text-align: center;
+}
+
+/* Input forms inside the visual context of the book ~ layouts and styles */
+
+.first_page_label {
+	margin-top: 0px;
+}
+
+label {
+	color: brown;
+}
+
+#new_recipe textarea, input[type=text] {
+	background: transparent;
+	border-width: 1px;
+	width: 92%;
+	position: relative;
+	left: 10px;
+	font-family: courier, serif;
+	font-size: 14px;
+	line-height: 1.5em;
+} 
+
+#recipe_name {
+	margin-top: 13px;
+	font-size: 16px;
+	font-family: Helvetica, Arial, sans-serif;
+	text-align: center;
+	width: 65%;
+	position: relative;
+	left: -2px;
+}
+
+#recipe_notes {
+	height: 80px;
+	resize: none;
+}
+
+#category_inputs {
+	line-height: 1.4em;
+}
+
+.category_input_slash {
+	font-size: 15px;
+	font-weight: bold;
+	color: brown;
+}
+
+#new_category_option {
+	font-style: italic;
+}
+
+.category_drop_down {
+	background: transparent;
+	border-width: 1px;
+	font-size: 13px;
+	font-family: Helvetica, Arial, sans-serif;
+}
+
+#ingredients_list {
+	line-height: 2em;
+}
+
+#recipe_directions {
+	position: relative;
+	top: -7px;
+	width: 100%;
+	height: 360px;
+}
+
+/* Talking Heads footer */
+
+#faces {	
+	position: absolute;
+	top: 720px;
+	margin: auto;
+	height: 130px;
+	width: 999px;
+	background-image:url(/images/LukashevskyFaces.png);
+	background-repeat: no-repeat;
+	background-position: center;
+} 
+
+
+
+
+/* #page2_title {	
+	position: absolute;
+	top: 20px;
+	left: 545px; 
+	width: 432px;
+	height: 45px;
+	padding: 0px;
+	
+	font-family: Helvetica, Arial, sans-serif;
+	text-align: center;
+	color: #333333;
+}
+
+#page2_title h4 {
+	margin-top: 26px;
+	font-weight: normal;
+} */

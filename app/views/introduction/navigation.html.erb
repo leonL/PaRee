@@ -1,0 +1,20 @@
+<div id="page1">
+
+	<%= render(:partial => 'introduction_submenu') %>
+	<%= image_tag("chefReading.png", :size => "282x497", :id => "chef_reading") %>
+
+</div>
+
+<div id="page2">
+<p>
+Skim through the recipes at random by clicking the arrow at the bottom of the page, or use the bookmark menu above for a more ordered look around. Notes on a couple of the bookmark links follow:
+</p>
+<%= link_to_function('Out of the Ordinary', 'identifyBookmarkLink(event)', :class => 'bookmark_link_helper')  %>
+<p>
+Looking to try something new? Two of us are partners running a bulk food grocery in Toronto. Here’s a list of ingredients we find that customers are often curious about, but unsure how to incorporate into their diets, with cooking instructions and recipes from the cookbook keyed to each.
+</p>
+<%= link_to_function('Russian Jewish Cuisine', 'identifyBookmarkLink(event)', :class => 'bookmark_link_helper')  %>
+<p>
+One side of our family hails from a Ukrainian shtetl called Bershad, near Vinnytsia. In terms of its Slavic culture Bershad is more Russian than it is Ukrainian. The heritage recipes in our cookbook are what you might expect - borscht, kugel, cabbage rolls, gefilte fish - kept true to the regional variations of our hometown. Of course everyone will tell you their hometown does it best, but in our case it’s true. :)
+</p>
+</div>

@@ -1,0 +1,17 @@
+<% category_input.empty? ? level = 0 : level = category_input[0].level %>
+
+<span id="categoryDropDown<%= level %>"> <!-- An anonymous span used by JS to treat the drop-down input, plus the forward slash that follows it as a single unit -->
+		
+	<select onchange = "updateCategoryInput(this)" class='category_drop_down' id="level=<%= level %>" name='recipe[category_id][]'>
+			
+		<option value="blank"></option>
+		<% category_input.each do |c| %>
+			<option value="<%= c.id %>">
+				<%=h c.name %></option>
+		<% end %>
+		<option class="new_category_option" value ="new">New Category</option>
+	
+	</select>
+
+	&nbsp;<span class='category_input_slash'>/</span>&nbsp;
+</span>

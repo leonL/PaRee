@@ -1,0 +1,22 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<title>You Should be Cookin' in Pa-Ree</title>
+	<%= stylesheet_link_tag 'book' %>
+	<%= javascript_include_tag :defaults %>
+</head>
+
+<body>
+	<div id="YSBCP">
+	<%= render(:file => 'layouts/bookmark') %>
+	<%= image_tag("openBook2.png", :size => "999x653", :id => "open_book") %>
+	<div id="book">
+		<%= yield %>
+	</div>
+	<div id="faces"></div>
+	</div>
+</body>
+
+</html>

@@ -1,0 +1,22 @@
+<div id="page1_title">
+	<h3>
+			<%= link_to('Recipe Browser', {:id => ''}, :id => (@selectedNode == nil ? 'selected' : ''))%>
+	</h3>
+</div>
+<div id="page1">
+	<div id='category_menu'>
+		<ul id='level=1&parent=0'>
+			<%= render(:partial => 'category_menu', :collection => @categoryMenuSequence) %>
+		</ul>
+	</div>
+</div>
+
+<div id="page2">
+	<ul id='list_of_recipes'>
+		<%= render(:partial => 'recipe_listing', :collection => @listOfRecipes) %>
+	</ul>
+</div>
+
+<div id="page2_footer">
+	<%= link_to_remote('New Recipe', :update => 'book', :url => new_recipe_path, :method => :get)%>
+</div>
