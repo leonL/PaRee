@@ -1,13 +1,20 @@
+# The categories modeled here are logically organized into a tree structure. The DB table itself supports the sturucture only 
+# to the extent that each record has a reference to the id of its parent (except for in the case of root categories, where
+# the reference field is NULL). Much of the purpose of the class's custom functionality is to make explicit representations 
+# of the implied hierarchy. 
+
 class Category < ActiveRecord::Base
   has_many :recipes
 
 # Class methods(s):
 
-# A class method that prepares an array of Categories sequenced for display in the view. The generated menu includes all the 
-# parent menus that the category with id 'selection' is nested in, as well as the category's immediate children. Each subsequent 
-# submenu is represented by a succesively nested array in the return value. If the string 'all' is passed in as the 'selection'
-# parameter rather than a Category id, the complete range of Categories is returned, with subCategories in nested arrays following
-# immediately after their parent Categories. 
+# Category.categoryMenuSequence
+# Defines an array of Category objects structured to represent either the full tree (if the argument passed to SELECTION is 'all'), or
+# a tree segment relative to a given category (if the argument is an id). In the later case, the path to the given category is 
+# represented, as well as all the subcategories that belong to it, and the siblings of each node on the path (used to construct
+# the category menu in /recipe/browser for one).     
+# Each sublevel of categories is represented by a succesively nested array imediately following its parent category. 
+# Calling the method with the default argument nil returns an array of all the root categories.  
 def Category.categoryMenuSequence(selection = nil)
 
   menuSequence = Category.find(:all, :conditions => "parent_category_id IS NULL", :order => 'id') # the root level of the menu
@@ -41,7 +48,7 @@ def Category.categoryMenuSequence(selection = nil)
 end
 
 # A recursive helper class method that nests the array of Categories 'menu' with arrays representing the full 
-# hierarchy of child Categories that descend from each.
+# hierarchy of child Categories that descend from each. (?Why can't I make this method private?)
 def Category.nestChildCategories(menu) 
   insertIndex = 1
   menu.each do |cat|
@@ -60,14 +67,20 @@ end
 
 # Instance methods:
 
-attr_accessor :subparent
+attr_accessor :subparent # the succeeding category object to THIS within the the context of a hierarchy path.  
+attr_writer :level # the level in the tree hierarchy to which THIS belongs (Numbering begins at 1, the level of the root categories)
 
-# 'level' attribute setter.
-def level=(value)
-  @level = value
+# @level getter. Calls computeLevelBySQL() if the level has yet to be set, and the category is not at the root level.
+def level 
+  if (self.parent_category_id == nil)
+    @level = 1
+  elsif (@level == nil) 
+    @level = computeLevelBySQL
+  end 
+  @level
 end
 
-# Returns the depth at which the the cateogry is nested in the hierarchy. Numbering begins at 1, which denotes the root level.
+# A helper method that computes @level by counting the succesive parent references from THIS to a root category.
 def computeLevelBySQL()
   parentNode = self.parent_category_id
   depth = 1
@@ -76,16 +89,6 @@ def computeLevelBySQL()
     parentNode = Category.find(parentNode).parent_category_id
   end 
   depth
-end
-
-# 'level' attribute getter. Calls computeLevelBySQL() if the level has yet to be set, and the category is not at the root level.
-def level 
-  if (self.parent_category_id == nil)
-    @level = 1
-  elsif (@level == nil) 
-    @level = computeLevelBySQL
-  end 
-  @level
 end
 
 # If the category has subcategories returns an array of them. Otherwise, returns an empty array

@@ -1,6 +1,8 @@
 // Place your application-specific JavaScript functions and classes here
 // This file is automatically included by javascript_include_tag :defaults
 
+var $j = jQuery.noConflict();
+
 function revealBookmark() 
 {
 	$("bookmark").style.zIndex = "5";
@@ -136,6 +138,14 @@ function updateCategoryInput(selectInputChanged) {
 			Element.remove(categoryDropDowns[i-1].parentNode);
 		}
 		
+		/* A loop that removes the attrbiute 'name' from any of the select elements that remain on the page. The attribute is
+		then added to the select element that triggered the function, so that the last select element to be set represents the 
+		category posted when the form is submitted */
+		for (var i = 0; i < categoryDropDowns.length; i++) {
+			categoryDropDowns[i].name = "";
+		} 
+		selectInputChanged.name = "recipe[category_id]";
+		
 		if (selectInputChanged.value != "new") addNewMenu();
 		else {
 			
@@ -202,5 +212,43 @@ function addIngredientInput(triggerElement) {
 		var newInputElement = triggerElement.parentNode.cloneNode(true);
 		newInputElement.childNodes[0].value = "";
 		$("ingredients_list").insert({ bottom: newInputElement });
+	}
+}
+
+/* 
+scrollControl is a singleton object. Think of it as a simple switch that can be used to turn the scrolling of
+an HTML block on and off. To turn the switch on call the method scroll, passing to it the id of the html block 
+you'd like to scroll, and the direction in which you'd like to scroll it (vertical scrolling only) by way of an 
+event object (where the first property is called divToScrollId and the second is a boolean called scrollDown).
+Scrolling will continue until the block reaches the end point of the given direction, or until the stopScroll()
+method is called.
+*/
+var scrollControl = {
+	downTest: function() {
+		return (scrollControl.keepScrolling  && (scrollControl.totalHeight > scrollControl.divHeight + 
+					parseInt(scrollControl.divToScroll.scrollTop)));
+	},
+	upTest: function() {
+		return (scrollControl.keepScrolling  && (parseInt(scrollControl.divToScroll.scrollTop) > 0));
+	},
+	scrollOn: function() {
+		setTimeout(function() {
+			if (scrollControl.scrollTest()) {
+				scrollControl.divToScroll.scrollTop += scrollControl.increment;
+				scrollControl.scrollOn();
+			}
+		}, 1);
+	},
+	scroll: function(evt) {
+		scrollControl.divToScroll = $j('#' + evt.data.divToScrollId)[0];
+		scrollControl.totalHeight = parseInt(scrollControl.divToScroll.scrollHeight);
+		scrollControl.divHeight =  parseInt(scrollControl.divToScroll.offsetHeight);
+		scrollControl.scrollTest = (evt.data.scrollDown) ? scrollControl.downTest : scrollControl.upTest;
+		scrollControl.increment = (evt.data.scrollDown) ? 1 : -1;
+		scrollControl.keepScrolling = true;
+		scrollControl.scrollOn();
+	},
+	stopScroll: function() {
+		scrollControl.keepScrolling = false;
 	}
 }

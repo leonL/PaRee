@@ -5,7 +5,8 @@
 <head>
 	<title>You Should be Cookin' in Pa-Ree</title>
 	<%= stylesheet_link_tag 'book' %>
-	<%= javascript_include_tag :defaults %>
+	<%= javascript_include_tag 'prototype', 'effects', 'controls', 'dragdrop', 'jquery', 'application', 
+			"#{params[:controller]}/#{params[:action]}" %>
 </head>
 
 <body>

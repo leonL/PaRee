@@ -131,6 +131,24 @@ a {
 	color: purple;
 }
 
+#page1_footer {
+	position: absolute;
+	bottom: 30px;
+	left: 40px;
+	width: 430px;
+	height: 30px;
+}
+
+#up_arrow {
+	position: absolute;
+	left: 47%;
+}
+
+#down_arrow {
+	position: absolute;
+	left: 53%;
+}
+
 /* Introduction Images layout (page 1) */
 
 #kugel {	
@@ -296,9 +314,6 @@ label {
 	background-repeat: no-repeat;
 	background-position: center;
 } 
-
-
-
 
 /* #page2_title {	
 	position: absolute;

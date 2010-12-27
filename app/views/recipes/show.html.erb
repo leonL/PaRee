@@ -3,7 +3,8 @@
 </div>
 <div id="page1">	
 	<h4>Notes</h4>
-	<p class='recipe_details'><%=h @recipe.notes %></p>
+	<p class='recipe_details'>
+	<%=simple_format(h @recipe.notes) %></p>
 	
 	<h4>Ingredients</h4>
 	<p><%=h @recipe.ingredients %></p>
@@ -15,7 +16,7 @@
 
 <div id="page2">
 	<h4>Directions</h4>
-	<p><%=h @recipe.directions %></p>	
+	<%= simple_format(h @recipe.directions) %> 
 </div>
 
 <div id="page2_footer">

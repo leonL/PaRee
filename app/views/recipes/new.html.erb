@@ -19,9 +19,13 @@
 				<%= render :partial => 'ingredient_input' %>
 			<% end %>  	
 		</ul>
-
-</div>
-  <div id="page2">	
+	</div>
+	<div id="page1_footer">
+		<%= image_tag("upArrow.png", :size => "16x15", :id => "up_arrow") %>
+  	<%= image_tag("downArrow.png", :size => "16x15", :id => "down_arrow") %>
+	</div>
+		
+	<div id="page2">	
 		<h4 class='first_page_label'><%= f.label :directions %></h4>
   	<%= f.text_area :directions, :class => 'book_input', :onblur => "this.style.border = 'none'" %>
 		<h4 id='yield_input_label'><%= f.label :yield %></h4>

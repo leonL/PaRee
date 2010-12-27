@@ -88,6 +88,8 @@ class RecipesController < ApplicationController
   # POST /recipes
   # POST /recipes.xml
   def create
+    params[:recipe][:ingredients].delete("")
+    params[:recipe][:ingredients] *= "&&"
     @recipe = Recipe.new(params[:recipe])
 
     respond_to do |format|

@@ -3,10 +3,10 @@
 	<%= image_tag("bookmarkNoFrill.png", :id=> "bookmarkNoFrill", 
 		:onmouseover => "revealBookmark(event)", :onmouseout => "concealBookmark(event)") %>
 	<div id="bookmark_menu">
-		<%= params[:controller] == 'introduction' ? "<a id='selected' " : "<a " %>href="www.google.com">Introduction</a> <br />
-		<%= params[:controller] == 'recipes' ? "<a id='selected' " : "<a " %>href="www.google.com">Recipe Browser</a> <br />
-		<%= params[:controller] == 'notOrdinary' ? "<a id='selected' " : "<a " %>href="www.google.com">Out of the Ordinary</a> <br />
-		<%= params[:controller] == 'russianJewish' ? "<a id='selected' " : "<a " %>href="www.google.com">Russian Jewish Cuisine</a>
+		<%= link_to "Introduction", {:controller => "introduction", :action => "preface"} %><br />
+		<%= link_to "Recipe Browser", recipes_browser_path %><br />
+		<%= link_to "Out of the Ordinary", recipes_browser_path %><br />
+		<%= link_to "Russian Jewish Cuisine", recipes_browser_path %><br />
 	</div>
 </div>
 
